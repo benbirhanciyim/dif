@@ -1,0 +1,117 @@
+[
+    {
+        "label": "b32encode",
+        "importPath": "base64",
+        "description": "base64",
+        "isExtraImport": true,
+        "detail": "base64",
+        "documentation": {}
+    },
+    {
+        "label": "pyperclip",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pyperclip",
+        "description": "pyperclip",
+        "detail": "pyperclip",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "TOTP",
+        "importPath": "pyotp",
+        "description": "pyotp",
+        "isExtraImport": true,
+        "detail": "pyotp",
+        "documentation": {}
+    },
+    {
+        "label": "MAX_LENGTH",
+        "kind": 5,
+        "importPath": "test.keyGen",
+        "description": "test.keyGen",
+        "peekOfCode": "MAX_LENGTH = 10\n# max key limit\nMAX_LIMIT = 255\n##############\nkey = ''\nfor _ in range(MAX_LENGTH):\n    integer = random.randint(0, MAX_LIMIT)\n    key += (chr(integer))\nkeyEncoded = b32encode(bytes(key, \"utf-8\")).decode()\nprint(f'\\nYour key is: {keyEncoded}\\nCopied key to clipboard!\\n')",
+        "detail": "test.keyGen",
+        "documentation": {}
+    },
+    {
+        "label": "MAX_LIMIT",
+        "kind": 5,
+        "importPath": "test.keyGen",
+        "description": "test.keyGen",
+        "peekOfCode": "MAX_LIMIT = 255\n##############\nkey = ''\nfor _ in range(MAX_LENGTH):\n    integer = random.randint(0, MAX_LIMIT)\n    key += (chr(integer))\nkeyEncoded = b32encode(bytes(key, \"utf-8\")).decode()\nprint(f'\\nYour key is: {keyEncoded}\\nCopied key to clipboard!\\n')\npyperclip.copy(keyEncoded)",
+        "detail": "test.keyGen",
+        "documentation": {}
+    },
+    {
+        "label": "key",
+        "kind": 5,
+        "importPath": "test.keyGen",
+        "description": "test.keyGen",
+        "peekOfCode": "key = ''\nfor _ in range(MAX_LENGTH):\n    integer = random.randint(0, MAX_LIMIT)\n    key += (chr(integer))\nkeyEncoded = b32encode(bytes(key, \"utf-8\")).decode()\nprint(f'\\nYour key is: {keyEncoded}\\nCopied key to clipboard!\\n')\npyperclip.copy(keyEncoded)",
+        "detail": "test.keyGen",
+        "documentation": {}
+    },
+    {
+        "label": "keyEncoded",
+        "kind": 5,
+        "importPath": "test.keyGen",
+        "description": "test.keyGen",
+        "peekOfCode": "keyEncoded = b32encode(bytes(key, \"utf-8\")).decode()\nprint(f'\\nYour key is: {keyEncoded}\\nCopied key to clipboard!\\n')\npyperclip.copy(keyEncoded)",
+        "detail": "test.keyGen",
+        "documentation": {}
+    },
+    {
+        "label": "api_uri",
+        "kind": 5,
+        "importPath": "test.test",
+        "description": "test.test",
+        "peekOfCode": "api_uri = \"http://localhost:3000\"\n# needs to be same key as the one in your api\npass32 = 'K4ZVUQTSIRMDOWKRGU2WQQTZJM======'\nkey = TOTP(pass32).now()\nembed = {\n    'content': 'It works!',\n    'embeds': [\n        {\n            'description': '🌟・https://github.com/Rdimo/Discord-Webhook-Protector'\n        }",
+        "detail": "test.test",
+        "documentation": {}
+    },
+    {
+        "label": "pass32",
+        "kind": 5,
+        "importPath": "test.test",
+        "description": "test.test",
+        "peekOfCode": "pass32 = 'K4ZVUQTSIRMDOWKRGU2WQQTZJM======'\nkey = TOTP(pass32).now()\nembed = {\n    'content': 'It works!',\n    'embeds': [\n        {\n            'description': '🌟・https://github.com/Rdimo/Discord-Webhook-Protector'\n        }\n    ]\n}",
+        "detail": "test.test",
+        "documentation": {}
+    },
+    {
+        "label": "key",
+        "kind": 5,
+        "importPath": "test.test",
+        "description": "test.test",
+        "peekOfCode": "key = TOTP(pass32).now()\nembed = {\n    'content': 'It works!',\n    'embeds': [\n        {\n            'description': '🌟・https://github.com/Rdimo/Discord-Webhook-Protector'\n        }\n    ]\n}\nwith open(__file__, 'rb') as f:",
+        "detail": "test.test",
+        "documentation": {}
+    },
+    {
+        "label": "embed",
+        "kind": 5,
+        "importPath": "test.test",
+        "description": "test.test",
+        "peekOfCode": "embed = {\n    'content': 'It works!',\n    'embeds': [\n        {\n            'description': '🌟・https://github.com/Rdimo/Discord-Webhook-Protector'\n        }\n    ]\n}\nwith open(__file__, 'rb') as f:\n    r = requests.post(api_uri,",
+        "detail": "test.test",
+        "documentation": {}
+    }
+]
